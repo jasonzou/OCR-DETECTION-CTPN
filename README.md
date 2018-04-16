@@ -2,13 +2,16 @@
   
   
 CNN+LSTM (CTPN) for image text detection
-  
+
   
 ### example results
   
 ![detect_test_results](https://github.com/Li-Ming-Fan/OCR-DETECTION-CTPN/blob/master/detect_test_result/5000_bkgd_1_0_generated_0.png?raw=true)
   
-  
+### Installation
+
+#### install minicoda
+#### install   
   
 ### description
   

@@ -63,6 +63,9 @@ def extractNormalizedFrom(img_file):
     if NumH > 1:
         StrideH = (img_size[1] - height_norm) * 1.0 / (NumH-1) 
     #
+
+    NumH = int(NumH)
+    NumW = int(NumW)
     filename = os.path.basename(img_file)
     arr_str = os.path.splitext(filename)
     filename = os.path.join(dir_images_base, arr_str[0])
@@ -77,7 +80,7 @@ def extractNormalizedFrom(img_file):
         x_e = width_norm
         #
         for i in range(0, NumW):
-            bbox = (x_s,y_s,x_e,y_e)
+            bbox = (int(x_s),int(y_s),int(x_e),int(y_e))
             region = img_pre.crop(bbox)
             #
             region_file = filename + '_' + str(num) + arr_str[1]

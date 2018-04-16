@@ -93,7 +93,9 @@ if not os.path.exists(dir_contents_gen): os.mkdir(dir_contents_gen)
 #
 def extractWords(text): return re.findall(r'\w+', text.lower())
 #
-WORDS = Counter(extractWords(open(words_file, encoding="utf-8").read()))
+with open(words_file, "rb") as f:
+    contents = f.read().decode("UTF-8")
+WORDS = Counter(extractWords(contents))
 #
 #Add new word
 #WORDS['history'] = 100

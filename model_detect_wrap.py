@@ -246,7 +246,7 @@ class ModelDetect():
                     #
                     img_size = model_detect_data.getImageSize(img_file) # width, height
                     #
-                    w_arr = np.ones((feat_size[0],), dtype = np.int32) * img_size[0]
+                    w_arr = np.ones((int(feat_size[0]),), dtype = np.int32) * img_size[0]
                     #
                     feed_dict = {x: img_data, w: w_arr, \
                                  t_cls: target_cls, t_ver: target_ver, t_hor: target_hor}
@@ -337,17 +337,20 @@ class ModelDetect():
                 #
                 for i in range(TRAINING_STEPS):
                     #
+                    print(list_images_train)
                     img_file = random.choice(list_images_train)
                     #
                     # print(img_file)
                     #
                     # input data
+                    print(meta.anchor_heights)
                     img_data, feat_size, target_cls, target_ver, target_hor = \
                     model_detect_data.getImageAndTargets(img_file, meta.anchor_heights)
                     #
                     img_size = model_detect_data.getImageSize(img_file) # width, height
                     #
-                    w_arr = np.ones((feat_size[0],), dtype = np.int32) * img_size[0]
+                    print(feat_size[0])
+                    w_arr = np.ones((int(feat_size[0]),), dtype = np.int32) * img_size[0]
                     #
                     #
                     feed_dict = {x: img_data, w: w_arr, \

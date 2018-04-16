@@ -234,9 +234,9 @@ def getImageAndTargets(img_file, anchor_heights):
     #
     num_anchors = len(anchor_heights)
     #
-    target_cls = np.zeros((height_feat, width_feat, 2*num_anchors))
-    target_ver = np.zeros((height_feat, width_feat, 2*num_anchors))
-    target_hor = np.zeros((height_feat, width_feat, 2*num_anchors))
+    target_cls = np.zeros((int(height_feat), int(width_feat), 2*num_anchors))
+    target_ver = np.zeros((int(height_feat), int(width_feat), 2*num_anchors))
+    target_hor = np.zeros((int(height_feat), int(width_feat), 2*num_anchors))
     #
     
     #
@@ -271,11 +271,11 @@ def getImageAndTargets(img_file, anchor_heights):
     wc_start = 4
     #
     
-    for h in range(height_feat):
+    for h in range(int(height_feat)):
         #
         hc = hc_start + ash * h  # anchor height center
         #
-        for w in range(width_feat):
+        for w in range(int(width_feat)):
             #
             cls,ver,hor = calculateTargetsAt([hc, wc_start + asw * w], txt_list, anchor_heights)
             #
