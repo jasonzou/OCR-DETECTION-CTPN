@@ -44,7 +44,7 @@ By 2 and 3, validation data and training data will be generated. These will be s
 By 4, the model will be trained and validated. The validation results will be stored in data_test/results/. The ckpt files will be stored in a newly-maked directory, model_detect/.
 
 ### Sample results  
-![detect_test_results](https://github.com/Li-Ming-Fan/OCR-DETECTION-CTPN/blob/master/detect_test_result/5000_bkgd_1_0_generated_0.png?raw=true)
+![detect_test_results](https://github.com/jasonzou/OCR-DETECTION-CTPN/blob/master/detect_test_result/5000_bkgd_1_0_generated_0.png?raw=true)
 
 ### The detection model
   
