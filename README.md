@@ -28,22 +28,28 @@ chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
 conda create -n ocr python=2.7 pip PIL scipy numpy jupyter
 conda update conda
 pip update pip
-
+source activate ocr
+##选择国内源，速度更快
+pip install easydict -i https://pypi.tuna.tsinghua.edu.cn/simple/ 
+pip install keras==2.0.8  -i https://pypi.tuna.tsinghua.edu.cn/simple/  
+pip install Cython opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple/ 
+pip install matplotlib -i https://pypi.tuna.tsinghua.edu.cn/simple/ 
+pip install -U pillow -i https://pypi.tuna.tsinghua.edu.cn/simple/
+pip install  h5py lmdb mahotas -i https://pypi.tuna.tsinghua.edu.cn/simple/
+conda install pytorch=0.1.12 cuda80 torchvision -c soumith
+##解决cuda报错相关问题
+conda install tensorflow=1.7
 ```
   
 ### description
   
 To run this repo:
   
-1, python data_base_normalize.py    &nbsp; &nbsp; &nbsp;   # to normalize the pre-normalized background images
-  
-2, python data_generator.py 0    &nbsp; &nbsp; &nbsp;  # to generate validation data
-  
-3, python data_generator.py 1     &nbsp; &nbsp; &nbsp;  # to generate training data
-  
-4, python script_detect.py    &nbsp; &nbsp; &nbsp;  # to train and validate
- 
-</br>
+- python data_base_normalize.py    &nbsp; &nbsp; &nbsp;   # to normalize the pre-normalized background images 
+- python data_generator.py 0    &nbsp; &nbsp; &nbsp;  # to generate validation data
+- python data_generator.py 1     &nbsp; &nbsp; &nbsp;  # to generate training data
+- python script_detect.py    &nbsp; &nbsp; &nbsp;  # to train and validate
+
   
 By 1, the pre-normalized images will firstly be rescaled if not of size 800x600, then 800x600 rects will be cropped from the rescaled images. The 800x600 images will be stored in a newly-maked directory, images_base/.
   
