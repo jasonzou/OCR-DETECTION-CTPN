@@ -25,7 +25,10 @@ chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
 ```
 #### Create a conda env
 ```bash
-conda create -n ocr python=2.7 pip PIL
+conda create -n ocr python=2.7 pip PIL scipy numpy jupyter
+conda update conda
+pip update pip
+
 ```
   
 ### description
