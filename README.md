@@ -10,7 +10,19 @@ CNN+LSTM (CTPN) for image text detection
   
 ### Installation
 
-#### install minicoda
+#### install minicoda python 3.6 - x64 on Linux
+```bash
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+```
+
+#### Install Anaconda python 3.6 - x64 on Linux
+```bash
+wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
+./Anaconda3-5.1.0-Linux-x86_64.sh
+```
 #### install   
   
 ### description
