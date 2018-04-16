@@ -23,7 +23,10 @@ wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
 ./Anaconda3-5.1.0-Linux-x86_64.sh
 ```
-#### install   
+#### Create a conda env
+```bash
+conda create -n ocr python=2.7 pip PIL
+```
   
 ### description
   
